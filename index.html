@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=pRkgOfMUgm-QVPxcSgGBChCoMhfRGJcl8YOtCX7Di99f7X3QcMjgCgKkJpYGCRa5EAWyEXu6Yirfhi6hnhcZugDM8tKmbm4Pqfc_-C_wb9Q9G7UdBmneZ8tuOopn-HIBlkbV-WagndaAkSjck6qWTC3-rcvblfpO7qfkdySZbrO88KHMHVWfdMVRDg84ArVYiqMG9iCsFvmes6JDbFyUEsF0S7zgvVK0ZPA_sLrXxGTPFBeYBOPJiuzbCC82bD-s57ifMojGyopX2AfuFJNvoA" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDkzZjg4MWY0OWY4MTBhZWE0MTI2MmIzMCZ0cz00OTcyNDEmcD1mcyZjaWQ9MSZzaWc9NTBhNjA0ZmI5ZGI2ZGJjNDc0NDgyMGE4ODZlYzc1ODNhZTQ1NzgxMTNjMjJjYjU3ZDIyODQyNmFiMTZjOTBkYSZ2PTA"/><style>
+<style>
 :root{
   --bg:#0a0e13; --bg2:#111820; --bg3:#18222c;
   --line:#24333f; --line2:#31485a;
@@ -584,6 +584,109 @@ button{font-family:var(--ui);cursor:pointer;color:inherit;background:none;border
  #hangar.academy-build .hbar h2 small,#hangar.academy-build .presets{display:none}
 }
 
+/* Arkadaş odaları */
+#menu .menu-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+#menu .menu-actions .btn{margin:0;padding:12px 22px;font-size:15px}
+#hangarOnline{white-space:nowrap;padding:8px 12px;font-size:12px}
+#online{overflow:auto;background:radial-gradient(ellipse at 50% 0%,#162938 0%,#0a0e13 70%);padding:24px max(16px,env(safe-area-inset-right)) 24px max(16px,env(safe-area-inset-left));}
+#online .online-shell{width:min(840px,100%);margin:auto}
+#online .online-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+#online h2{font-size:24px;letter-spacing:.08em}
+#online .eyebrow{font-family:var(--mono);color:var(--acc);font-size:10px;letter-spacing:.15em;margin-bottom:4px}
+#online .online-card{padding:20px;border:1px solid var(--line2);border-radius:14px;background:rgba(17,24,32,.94)}
+#online .online-copy{color:var(--dim);font-size:13px;line-height:1.5;margin:8px 0 16px}
+#online label{display:block;color:var(--dim);font-size:12px;margin:12px 0 6px}
+#online input{width:100%;min-height:44px;border:1px solid var(--line2);border-radius:8px;padding:10px 12px;background:var(--bg);color:var(--fg);font:16px var(--ui)}
+#online input:focus{outline:2px solid var(--acc2);outline-offset:2px}
+#online .online-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#online .online-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#online .online-row .btn{flex:1;min-height:44px;border-radius:8px;padding:10px}
+#online .online-build{margin:14px 0;border-left:2px solid var(--acc2);padding:8px 12px;color:var(--dim);font-size:12px;line-height:1.5}
+#online .online-build b{color:var(--fg)}
+#online #onlineCodeInput{text-transform:uppercase;font-family:var(--mono);letter-spacing:.18em}
+#online #onlineError{color:#ff8a82;font-size:13px;min-height:22px;margin:12px 0 0;white-space:pre-line}
+#online .config-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+#online .config-tools .btn{min-height:44px;padding:8px 12px;font-size:12px}
+#online #serverConfigStatus{flex:1 1 180px;min-width:0;overflow-wrap:anywhere;color:var(--dim);font-size:12px;line-height:1.5}
+#online #onlineNotice{color:var(--warn);font-size:13px;margin-bottom:12px;line-height:1.5}
+#online #onlineNotice:empty{display:none}
+#online [hidden]{display:none!important}
+#online .room-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+#online #roomCode{font:700 28px var(--mono);letter-spacing:.18em;color:var(--fg);user-select:all}
+#online .room-meta{font-size:12px;color:var(--dim);margin-top:5px}
+#online .team-card{min-width:0;border:1px solid var(--line2);border-radius:12px;padding:14px;background:#0c141c}
+#online .team-card.selected{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc2)}
+#online .team-card.red.selected{border-color:#ff7a70;box-shadow:inset 0 0 0 1px #a8443e}
+#online .team-join{width:100%;min-height:44px;padding:8px;border-radius:8px;background:#122923;color:var(--acc);font-weight:700;font-size:16px}
+#online .red .team-join{background:#2c1a1a;color:#ff7a70}
+#online .team-join:disabled{opacity:.55;cursor:not-allowed}
+#online .team-join:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+#online .team-list{list-style:none;min-height:62px;margin-top:12px}
+#online .pilot-row{display:flex;justify-content:space-between;gap:6px;padding:9px 0;border-top:1px solid var(--line);font-size:13px}
+#online .pilot-name{overflow-wrap:anywhere}
+#online .ready-badge{font-size:11px;white-space:nowrap;color:var(--dim)}
+#online .ready-badge.yes{color:var(--acc)}
+#online .bot-count{color:var(--dim2);font-size:11px;margin-top:8px}
+#online #unassigned{color:var(--dim);font-size:12px;margin:12px 0;overflow-wrap:anywhere}
+#online .ready-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;flex-wrap:wrap}
+#online #readyStatus{color:var(--dim);font-size:13px;flex:1;min-width:190px;line-height:1.5}
+#online #readyBtn{min-width:170px;min-height:48px;border-radius:8px}
+#online #readyBtn:disabled{opacity:.45;cursor:default}
+#online .room-help{font-size:11px;color:var(--dim2);margin-top:12px;line-height:1.5}
+#netIndicator{position:absolute;top:calc(58px + env(safe-area-inset-top,0px));right:calc(8px + env(safe-area-inset-right,0px));font:10px var(--mono);color:var(--acc);pointer-events:none;z-index:100;display:none}
+#game.online-match #netIndicator{display:block}
+#game.online-match #t-pause{display:flex;z-index:101}
+#game.online-match #touch-ui{display:block}
+@media (hover:hover) and (pointer:fine){
+  #game.online-match #touch-ui>*:not(#t-pause){display:none!important}
+  #game.online-match .wpn-panel{top:84px}
+}
+@media (max-width:600px){
+  #online .online-grid{grid-template-columns:1fr}
+  #online .team-grid{grid-template-columns:1fr 1fr;gap:8px}
+  #online .online-card{padding:14px}
+  #online .team-card{padding:10px}
+  #online .pilot-row{flex-direction:column;gap:2px}
+  #online .team-join{font-size:13px}
+  #online h2{font-size:20px}
+}
+@media (max-height:500px) and (orientation:landscape){
+  #online{padding-top:12px;padding-bottom:12px}
+  #online .online-shell{margin:0 auto}
+  #online .online-head{margin-bottom:10px}
+  #online .online-card{padding:12px}
+  #online .team-list{min-height:28px;margin-top:6px}
+  #online .pilot-row{padding:5px 0}
+  #online .ready-footer{margin-top:10px}
+  #online .room-help{margin-top:8px}
+}
+
+
+#online .find-room-row{display:flex;align-items:center;gap:16px;border:1px solid var(--acc2);border-radius:10px;background:#10251f;padding:14px;margin-bottom:18px}
+#online .find-room-row .btn{min-width:140px;min-height:48px;border-radius:8px}
+#online .find-room-row span{font-size:12px;color:var(--dim);line-height:1.5}
+#online label.public-option{display:flex;align-items:center;gap:8px;margin-top:12px;cursor:pointer;min-height:32px}
+#online .public-option input{width:18px;height:18px;min-height:18px;flex-shrink:0;accent-color:var(--acc)}
+@media(max-width:450px){#online .find-room-row{align-items:stretch;flex-direction:column;gap:8px}}
+
+#online .online-shell{flex-shrink:0}
+#online .connection-box{border:1px solid var(--line2);padding:12px;margin:12px 0;border-radius:8px}
+#online select{background:var(--bg);color:var(--fg);padding:10px;border:1px solid var(--line2);border-radius:8px;min-height:44px;max-width:100%}
+#online .connection-help{font-size:12px;color:var(--dim);line-height:1.5;margin-top:8px;overflow-wrap:anywhere}
+#online .connection-box[hidden]{display:none}
+#aircraftDialog{color:var(--fg);background:var(--bg2);border:1px solid var(--line2);border-radius:12px;margin:auto;width:min(680px,94vw);max-height:92dvh;padding:18px;overflow:auto}
+#aircraftDialog::backdrop{background:#000b}
+#aircraftDialog h2{font-size:20px;margin-bottom:10px}
+#aircraftDialog label{display:block;margin-top:12px;font-size:12px;color:var(--dim)}
+#aircraftDialog input,#aircraftDialog textarea{background:var(--bg);color:var(--fg);border:1px solid var(--line2);padding:10px;width:100%;font:14px var(--mono);margin:5px 0}
+#aircraftDialog textarea{height:170px;resize:vertical;min-height:90px}
+#aircraftDialog button,#aircraftOpen{min-height:40px;font-size:12px;padding:8px 12px}
+#aircraftStatus{font-size:12px;line-height:1.5;color:var(--warn);margin:10px 0;white-space:pre-wrap}
+#aircraftApply:disabled{opacity:.35}
+.aircraft-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.academy-build #aircraftOpen,.academy-build #hangarOnline{display:none}
+@media(max-width:1000px){.hbar{flex-wrap:wrap;gap:6px}#hangarOnline,#aircraftOpen{padding:6px 9px;font-size:11px}#aircraftDialog button{min-height:44px}}
+
 </style>
 </head>
 <body>
@@ -595,6 +698,7 @@ button{font-family:var(--ui);cursor:pointer;color:inherit;background:none;border
     <div class="sub">bir hava savaşı...</div>
     <br><button class="btn pri" id="toHangar">Hangara Gir</button>
     <button class="btn" id="toAcademy">Uçuş Akademisi</button>
+    <button class="btn" id="toOnline">Online oyna</button>
     <div class="keys">
       <b>FARE</b> &nbsp;burun yönü &nbsp;·&nbsp; <b>SOL TIK</b> &nbsp;burun topu<br>
       <b>SAĞ TIK / SPACE</b> &nbsp;seçili mühimmatı ateşle<br>
@@ -615,7 +719,7 @@ button{font-family:var(--ui);cursor:pointer;color:inherit;background:none;border
   <div class="hbar">
     <h2>HANGAR <small>hiçbir parça kilitli değil — sadece trade-off</small></h2>
     <div class="sp"></div>
-    <button class="btn" id="hangarAcademy">Eğitim</button>
+    <button class="btn" id="hangarAcademy">Eğitim</button><button class="btn" id="aircraftOpen">Uçak paylaş / yükle</button><button class="btn" id="hangarOnline">Online oda</button>
     <div class="presets" id="presets"></div>
   </div>
   <div class="mode-picker">
@@ -639,7 +743,7 @@ button{font-family:var(--ui);cursor:pointer;color:inherit;background:none;border
 
 <!-- ============ OYUN ============ -->
 <div id="game" class="scr">
-  <canvas id="cv" tabindex="0"></canvas>
+  <canvas id="cv" tabindex="0"></canvas><div id="netIndicator"></div>
   <!-- TOUCH UI -->
   <div id="touch-ui">
     <button id="t-pause" type="button" aria-label="Oyunu duraklat" title="Duraklat"
@@ -765,6 +869,56 @@ button{font-family:var(--ui);cursor:pointer;color:inherit;background:none;border
   <button class="btn" id="tutorMenu" aria-expanded="false" aria-controls="tutorTools">Diğer işlemler</button>
  </div>
 </aside>
+
+<!-- ============ ARKADAŞ ODALARI ============ -->
+<div id="online" class="scr">
+  <div class="online-shell">
+    <div class="online-head">
+      <div><div class="eyebrow">SQUADRON / ONLINE</div><h2>ONLINE LOBİ</h2></div>
+      <button id="onlineBack" class="btn" type="button">HANGARA DÖN</button>
+    </div>
+    <div id="onlineNotice" role="status"></div>
+    <div class="online-card" id="onlineEntry">
+      <p class="online-copy">Oda oluştur, kodla katıl veya Oda bul ile rastgele bir odaya gir. Herkes hazır olduğunda birlikte kalkış yapın.</p>
+      <label for="pilotName">PİLOT ADIN</label>
+      <input id="pilotName" maxlength="20" autocomplete="nickname" placeholder="Örn. Orhan">
+      <div class="connection-box">
+        <label for="serverAddress">MAÇ SUNUCUSU</label><input id="serverAddress" type="url" maxlength="220" placeholder="https://…trycloudflare.com" autocomplete="off" spellcheck="false">
+        <div class="config-tools"><button id="refreshServer" class="btn" type="button">SUNUCU ADRESİNİ YENİLE</button><span id="serverConfigStatus" role="status" aria-live="polite">Güncel adres online menüsü açılınca alınır.</span></div>
+        <label for="serverKey">SUNUCU GİRİŞ ANAHTARI</label><input id="serverKey" type="password" maxlength="128" autocomplete="off" placeholder="Sunucuyu açan kişinin paylaştığı anahtar">
+        <p class="connection-help">Bilgisayarındaki sunucu açık olmalı. Adres GitHub’dan otomatik alınır. İstersen elle adres yazabilir veya yenile düğmesiyle otomatik adrese dönebilirsin. Anahtar bu tarayıcıda kalıcı kaydedilmez ve davet bağlantısına eklenmez.</p>
+      </div><div class="online-build" id="onlineBuild"></div>
+      <div class="find-room-row"><button id="findRoom" class="btn pri" type="button">ODA BUL</button><span>Boş yeri olan, maçın henüz başlamadığı açık bir odaya rastgele katıl.</span></div>
+      <div class="online-grid">
+        <div><label>YENİ ODA</label><div class="online-row"><button id="createRoom" class="btn pri" type="button">ODA OLUŞTUR</button></div><label class="public-option" for="publicRoom"><input id="publicRoom" type="checkbox" checked> Odam Oda bul’da görünsün</label><p class="online-copy">Filo Muharebesi · En az 1v1 · Takım kapasitesi sunucu ayarına bağlı</p></div>
+        <form id="joinRoomForm"><label for="onlineCodeInput">ARKADAŞININ ODA KODU</label><div class="online-row"><input id="onlineCodeInput" maxlength="6" placeholder="A1B2C3" autocomplete="off" autocapitalize="characters" spellcheck="false" style="flex:1;width:120px"><button class="btn" id="joinRoom" type="submit">KATIL</button></div></form>
+      </div>
+    </div>
+    <div class="online-card" id="onlineLobby" hidden>
+      <div class="room-header"><div><div class="eyebrow">ODA KODU</div><div id="roomCode"></div><div class="room-meta" id="roomCount"></div></div><button id="copyInvite" class="btn" type="button">DAVET BAĞLANTISI</button><button id="copyRoom" class="btn" type="button">KODU KOPYALA</button></div>
+      <div class="online-grid team-grid">
+        <section class="team-card" id="teamA"><button class="team-join" data-team="A" type="button" aria-pressed="false">MAVİ TAKIMA KATIL</button><ul class="team-list" id="playersA"></ul><div class="bot-count" id="botsA"></div></section>
+        <section class="team-card red" id="teamB"><button class="team-join" data-team="B" type="button" aria-pressed="false">KIZIL TAKIMA KATIL</button><ul class="team-list" id="playersB"></ul><div class="bot-count" id="botsB"></div></section>
+      </div>
+      <div id="unassigned"></div>
+      <div class="ready-footer"><div id="readyStatus" role="status" aria-live="polite"></div><button id="readyBtn" class="btn pri" type="button" disabled>HAZIRIM</button></div>
+      <div class="room-help">Takıma tıklayarak geçebilirsin. Takım veya oyuncu listesi değiştiğinde herkes yeniden hazır olur. Başlamak için her takımda en az 1 gerçek oyuncu olmalı. Boş yerleri botlar doldurur.</div>
+    </div>
+    <div id="onlineError" role="alert"></div>
+  </div>
+</div>
+
+
+<dialog id="aircraftDialog" aria-labelledby="aircraftTitle">
+ <h2 id="aircraftTitle">Uçak içe / dışa aktar</h2>
+ <p style="font-size:12px;color:var(--dim)">Parça tasarımını paylaşır; maç ilerlemesi ve sunucu anahtarı içermez.</p>
+ <label for="aircraftName">Uçak adı</label><input id="aircraftName" maxlength="40" value="Benim uçağım">
+ <div class="aircraft-actions"><button id="aircraftDownload" class="btn">Mevcut uçağı indir</button><button id="aircraftCopy" class="btn">Mevcut uçağın kodunu kopyala</button></div>
+ <label for="aircraftFile">Uçak dosyası seç (.json, en fazla 16 KB)</label><input type="file" id="aircraftFile" accept=".json,application/json">
+ <label for="aircraftText">Veya uçak kodunu yapıştır</label><textarea id="aircraftText" spellcheck="false" maxlength="16384"></textarea>
+ <div id="aircraftStatus" role="status"></div>
+ <div class="aircraft-actions"><button id="aircraftCheck" class="btn">Kodu kontrol et</button><button id="aircraftApply" class="btn pri" disabled>Hangara uygula</button><button id="aircraftClose" class="btn">Kapat</button></div>
+</dialog>
 
 <script>
 "use strict";
@@ -2047,6 +2201,7 @@ addEventListener('keydown',e=>{
   if(e.code==='Escape'){ KEY[e.code]=false; togglePause(); return; }
   if(G.paused||(TUTOR.active&&TUTOR.briefing)){ KEY[e.code]=false; return; }
   const p=G.me; if(!p||p.dead) return;
+  if(typeof Online!=='undefined'&&Online.playing){Online.key(e.code);return;}
   if(e.code==='Tab') cyclePod(p,1);
   if(/^Digit[1-6]$/.test(e.code)) p.sel=+e.code.slice(5)-1;
   if(e.code==='KeyH'){ dockKey(p); return; }
@@ -2066,6 +2221,7 @@ addEventListener('blur',()=>{ for(const k in KEY) KEY[k]=false; });
 addEventListener('wheel',e=>{
   if(!G.run||G.paused||(e.target&&e.target.closest&&e.target.closest('#tutorPanel'))) return;
   const p=G.me; if(!p||p.dead||p.dockT!=null) return;
+  if(typeof Online!=='undefined'&&Online.playing){Online.action('throttle',-Math.sign(e.deltaY));return;}
   p.thr = clamp(p.thr - Math.sign(e.deltaY)*0.1, 0, 1);
 });
 
@@ -2216,7 +2372,9 @@ function podGroups(p){
     m.get(o.id).n++; }
   return [...m.values()];
 }
-function cyclePod(p,d){ const g=podGroups(p); if(!g.length) return;
+function cyclePod(p,d){
+  if(typeof Online!=='undefined'&&Online.playing&&p===G.me){Online.action('cycle');return;}
+ const g=podGroups(p); if(!g.length) return;
   p.sel=((p.sel+d)%g.length+g.length)%g.length; }
 function selPod(p){ const g=podGroups(p); if(!g.length) return null;
   if(p.sel>=g.length) p.sel=0; return g[p.sel]; }
@@ -2230,6 +2388,8 @@ function consumePod(p,id){ const o=p.pods.find(o=>!o.used&&o.id===id); if(o){o.u
 function mvAgility(p){ return clamp(1.32-p.st.W_t*0.050,0.55,1.18); }
 
 function useManeuverSlot(p,i){
+  if(typeof Online!=='undefined'&&Online.playing&&p===G.me){Online.action('maneuver',i);return;}
+
   if(TUTOR.active&&TUTOR.briefing&&p===G.me)return;
   const set=p.st.af.manevra||[];
   if(i>=set.length){ if(p.isPlayer) toast(p.st.af.ad+' — bu gövdede '+set.length+' manevra var'); return; }
@@ -2389,6 +2549,8 @@ function maneuverStep(p,dt){
   return o;
 }
 function dropCM(p,type){
+  if(typeof Online!=='undefined'&&Online.playing&&p===G.me){Online.action(type==='flare'?'flare':'chaff');return;}
+
   if(TUTOR.active&&TUTOR.briefing&&p===G.me)return;
   if(p.cmT>0) return;
   if(p.empT > 0) { if(p.isPlayer) toast('Sistem kilitli (EMP) — ateşlenemiyor!'); return; }
@@ -2407,12 +2569,16 @@ function dropCM(p,type){
     if(q.team!==p.team && q.lockTgt===p){ q.lockT=0; q.lockBreak=1.5; } }
 }
 function swingWing(p){
+  if(typeof Online!=='undefined'&&Online.playing&&p===G.me){Online.action('wing');return;}
+
   if(p.st.wg.id!=='W7' && p.lo.wing!=='W7'){ if(p.isPlayer) toast('Bu kanat değişken geometri değil'); return; }
   if(p.katliT>0) return;
   p.katliT=0.8; p.katli=!p.katli;
   if(p.isPlayer) toast(p.katli?'Kanat KAPALI — hız modu':'Kanat AÇIK — dönüş modu');
 }
 function dropTank(p){
+  if(typeof Online!=='undefined'&&Online.playing&&p===G.me){Online.action('tank');return;}
+
   if(!p.tankOn) return;
   p.tankOn=false;
   p.st=computeBuild(Object.assign({},p.lo,{mods:p.lo.mods.filter(m=>m!=='tank')}));
@@ -2821,6 +2987,8 @@ function dockZone(p){
   return c;
 }
 function dockKey(p){
+  if(typeof Online!=='undefined'&&Online.playing&&p===G.me){Online.action('dock');return;}
+
   if(TUTOR.active&&TUTOR.briefing&&p===G.me)return;
   if(p.dockT!=null){ launchFromCarrier(p); return; }
   tryDock(p);
@@ -4356,6 +4524,7 @@ function toast(t){ G.toast=t; G.toastT=2.6; }
    MAÇ SONU
    ========================================================================== */
 function endMatch(who){
+  if(typeof Online!=='undefined'&&Online.playing&&who==='abort'){Online.leave();return;}
   if(TUTOR.active){tutorExit('hangar');return;}
   if(G.over&&who!=='abort') return;
   G.over=true; G.run=false; G.paused=false;
@@ -5169,10 +5338,304 @@ function initTutorial(){
   };
 }
 
+/* Shared schema: no script execution, known part IDs, bounded collections. */
+function checkedLoadout(raw){
+  const owns=(o,k)=>typeof k==='string'&&Object.hasOwn(o,k);
+  if(!raw||typeof raw!=='object'||Array.isArray(raw))throw Error('Uçak verisi bir nesne olmalı.');
+  const keys=['af','wing','eng','rad','gun','pods','mods'];
+  if(Object.keys(raw).some(k=>!keys.includes(k))||keys.some(k=>!Object.hasOwn(raw,k)))throw Error('Uçak alanları eksik veya tanınmıyor.');
+  if(!owns(AIRFRAMES,raw.af)||!owns(WINGS,raw.wing)||!owns(ENGINES,raw.eng)||!owns(RADARS,raw.rad)||(raw.gun!==null&&!owns(GUNS,raw.gun)))throw Error('Gövde, kanat, motor, radar veya top tanınmıyor.');
+  if(!Array.isArray(raw.pods)||raw.pods.length>16||!raw.pods.every(k=>owns(ALL_PAYLOADS,k)))throw Error('Mühimmat listesi geçersiz (en fazla 16).');
+  if(!Array.isArray(raw.mods)||raw.mods.length>16||!raw.mods.every(k=>owns(MODULES,k))||new Set(raw.mods).size!==raw.mods.length)throw Error('Modüller geçersiz veya tekrarlanmış.');
+  const lo={af:raw.af,wing:raw.wing,eng:raw.eng,rad:raw.rad,gun:raw.gun,pods:[...raw.pods],mods:[...raw.mods]};
+  const errors=computeBuild(lo).err;if(errors.length)throw Error('Donanım uyumsuz: '+errors.join(' · '));
+  return lo;
+}
+function readAircraft(text){
+  if(typeof text!=='string'||text.length>16384)throw Error('Dosya / kod çok büyük (en fazla 16 KB).');
+  let o;try{o=JSON.parse(text)}catch{throw Error('Geçerli bir JSON uçak dosyası veya kodu yapıştır.');}
+  if(!o||o.format!=='squadroneight-aircraft'||o.version!==1)throw Error('Desteklenmeyen uçak dosyası sürümü.');
+  if(typeof o.name!=='string'||o.name.length>40)throw Error('Uçak adı en fazla 40 karakter olmalı.');
+  return {format:o.format,version:1,name:o.name.replace(/[\u0000-\u001f\u007f]/g,'').trim(),loadout:checkedLoadout(o.loadout)};
+}
+const AircraftTransfer=(()=>{
+  let candidate=null;
+  const el=id=>document.getElementById(id);
+  const feedback=text=>el('aircraftStatus').textContent=text;
+  function open(){
+    if(TUTOR.active){return;}
+    candidate=null;el('aircraftApply').disabled=true;el('aircraftText').value='';el('aircraftName').value='Benim uçağım';feedback('JSON uçak dosyası seç veya paylaşım kodunu yapıştır.');
+    el('aircraftDialog').showModal();
+  }
+  function validate(){
+    try{candidate=readAircraft(el('aircraftText').value);const st=computeBuild(candidate.loadout);el('aircraftName').value=candidate.name;
+      feedback(candidate.name+' · '+st.af.ad+' · '+Math.round(st.W_kg)+' kg · '+Math.round(st.hp)+' HP · Hangara uygula ile mevcut uçağın değişir.');el('aircraftApply').disabled=false;
+    }catch(e){candidate=null;el('aircraftApply').disabled=true;feedback(e.message);}
+  }
+  function exportText(){
+    try{const data={format:'squadroneight-aircraft',version:1,name:el('aircraftName').value.trim().slice(0,40)||'Benim uçağım',loadout:checkedLoadout(LO)};
+      const text=JSON.stringify(data,null,2);el('aircraftText').value=text;candidate=null;el('aircraftApply').disabled=true;feedback('Mevcut hangar uçağın hazır. Dosyayı indir veya kodu kopyala.');return text;
+    }catch(e){feedback(e.message);return null;}
+  }
+  function init(){
+    el('aircraftOpen').onclick=open;el('aircraftClose').onclick=()=>el('aircraftDialog').close();
+    el('aircraftCheck').onclick=validate;el('aircraftText').oninput=()=>{candidate=null;el('aircraftApply').disabled=true;};
+    el('aircraftFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;candidate=null;el('aircraftApply').disabled=true;
+      try{if(f.size>16384)throw Error('Dosya çok büyük (en fazla 16 KB).');el('aircraftText').value=await f.text();validate();}catch(err){feedback(err.message)}finally{e.target.value='';}};
+    el('aircraftApply').onclick=()=>{if(!candidate||TUTOR.active)return;try{LO=checkedLoadout(candidate.loadout);save();renderAll();el('aircraftDialog').close();}catch(e){feedback(e.message)}};
+    el('aircraftDownload').onclick=()=>{const text=exportText();if(!text)return;const url=URL.createObjectURL(new Blob([text],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='squadron-aircraft.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+    el('aircraftCopy').onclick=async()=>{const text=exportText();if(!text)return;try{await navigator.clipboard.writeText(text);feedback('Uçak kodu kopyalandı.')}catch{el('aircraftText').focus();el('aircraftText').select();feedback('Otomatik kopyalama kullanılamadı; seçili kodu kopyalayabilirsin.')}};
+  }
+  return {init,open};
+})();
+AircraftTransfer.init();
+
 initMissionMenu();
 initTutorial();
 loadArt();
 
+/* ONLINE CLIENT START */
+const NET_PROTOCOL=2,NET_BUILD='43832d0d95c55bc18b3a';
+const Online = (()=>{
+  const net={ws:null,id:null,room:null,playing:false,pending:null,connecting:false,objects:new Map(),meta:new Map(),lastSnapshot:0,lastPing:0,frameId:0,connectedUrl:null,failure:null,configLoading:null,configMode:'auto',configRevision:0,configController:null,entryEpoch:0};
+  const el=id=>document.getElementById(id);
+  const setError=text=>{el('onlineError').textContent=text};
+  function endpoint(value){
+    let u;try{u=new URL(value)}catch{throw Error('Geçerli bir sunucu adresi yaz: https://…trycloudflare.com');}
+    if(u.username||u.password||u.search||u.hash||!['/','/ws'].includes(u.pathname))throw Error('Sunucu adresi yalnız alan adı ve isteğe bağlı /ws içermeli.');
+    if(u.protocol==='https:')u.protocol='wss:';else if(u.protocol==='http:')u.protocol='ws:';
+    const local=['localhost','127.0.0.1','[::1]'].includes(u.hostname);
+    if(u.protocol!=='wss:'&&!(u.protocol==='ws:'&&local&&location.protocol!=='https:'))throw Error('İnternette güvenli HTTPS / WSS sunucu adresi gerekli.');
+    u.pathname='/ws';return u.href;
+  }
+  // APK and web clients share this stable discovery address. No keys are fetched or uploaded.
+  const SERVER_CONFIG_URL='https://nukelaguesoftware.github.io/squadroneight/server-config.json';
+  const configStatus=text=>{el('serverConfigStatus').textContent=text};
+  function localHostPage(){
+    return ['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&!!location.port&&
+      ['http:','https:'].includes(location.protocol)&&!window.Capacitor?.isNativePlatform?.();
+  }
+  function loadConfig(force=false){
+    if(net.room||net.connecting)return Promise.resolve();
+    if(force){net.configMode='auto';net.configRevision++;net.configController?.abort();net.configLoading=null;el('serverAddress').value='';}
+    if(net.configMode!=='auto')return Promise.resolve();
+    if(net.configLoading)return net.configLoading;
+    const revision=net.configRevision,initial=el('serverAddress').value,local=localHostPage();
+    const controller=new AbortController();net.configController=controller;
+    const current=()=>revision===net.configRevision&&net.configMode==='auto'&&el('serverAddress').value===initial;
+    const url=new URL(local?'./server-config.json':SERVER_CONFIG_URL,location.href);
+    url.searchParams.set('_',String(Date.now()));
+    configStatus('Güncel sunucu adresi alınıyor…');el('refreshServer').disabled=true;
+    const timer=setTimeout(()=>controller.abort(),5000);
+    const task=(async()=>{
+      try{
+        const response=await fetch(url.href,{cache:'no-store',credentials:'omit',redirect:'error',signal:controller.signal});
+        if(!response.ok)throw Error('Adres dosyasına ulaşılamadı (HTTP '+response.status+').');
+        const text=await response.text();if(text.length>1024)throw Error('Sunucu adres dosyası geçersiz.');
+        let config;try{config=JSON.parse(text)}catch{throw Error('Sunucu adres dosyası geçerli JSON değil.');}
+        if(!config||typeof config!=='object'||Array.isArray(config)||typeof config.serverUrl!=='string')throw Error('Sunucu adres dosyası geçersiz.');
+        const raw=config.serverUrl.trim();
+        if(!raw&&!local)throw Error('Sunucu adresi henüz yayınlanmamış.');
+        const address=endpoint(raw||location.origin);
+        if(!local&&!address.startsWith('wss:'))throw Error('Yayınlanan sunucu adresi HTTPS / WSS olmalı.');
+        if(current()){el('serverAddress').value=address;configStatus(local?'Yerel sunucu adresi hazır.':'Güncel sunucu adresi GitHub’dan alındı.');}
+      }catch(error){
+        if(current()){el('serverAddress').value='';configStatus((error.name==='AbortError'?'Adres güncellemesi zaman aşımına uğradı.':error.message||'Adres güncellenemedi.')+' Yeniden dene veya adresi elle yaz.');}
+      }finally{
+        clearTimeout(timer);
+        if(net.configController===controller){net.configController=null;net.configLoading=null;el('refreshServer').disabled=false;}
+      }
+    })();
+    net.configLoading=task;return task;
+  }
+  function send(data){if(net.ws?.readyState===WebSocket.OPEN){net.ws.send(JSON.stringify(data));return true}return false}
+  function clearInput(){for(const key in KEY)KEY[key]=false;MOUSE.l=false;MOUSE.r=false;TOUCH.ang=null;TOUCH.dist=0;TOUCH.abOn=false;el('t-ab').classList.remove('on')}
+  function action(action,n){if(net.playing&&!G.paused&&!document.hidden)send({type:'action',action,n})}
+  function stop(){net.playing=false;G.run=false;G.paused=false;G.over=true;net.frameId++;clearInput();SFX.engineStop();SFX.warnStop();el('pauseView').classList.remove('on');el('t-pause').setAttribute('aria-expanded','false');el('game').classList.remove('online-match');el('pauseTitle').textContent='DURAKLATILDI';el('pauseView').querySelector('.p-sub').textContent='MAÇ BEKLEMEDE';el('pExit').textContent='HANGARA DÖN'}
+  function leave(){net.entryEpoch++;send({type:'leave'});net.room=null;stop();net.pending=null;if(net.ws){const ws=net.ws;net.ws=null;ws.close()}net.connecting=false;show('hangar');renderPresets();renderAll()}
+  function open(){
+    if(TUTOR.active)tutorExit('hangar');
+    if(net.room){show('online');renderRoom();return}
+    show('online');el('onlineEntry').hidden=false;el('onlineLobby').hidden=true;setError('');
+    const st=computeBuild(LO);el('onlineBuild').textContent='Seçili uçak: '+st.af.ad+' · '+(st.err.length?'Donanım hatalarını hangarda düzelt.':'Bu donanımla katılacaksın. Değiştirmek için hangara dön.');
+    loadConfig();
+    if(location.protocol==='file:')setError('Online oynamak için oyunu sunucu adresinden açmalısın. Paketteki BAŞLAT dosyasını çalıştırıp http://localhost:3000 adresini aç.');
+  }
+  async function connect(request){
+    setError('');el('onlineNotice').textContent='';
+    if(location.protocol==='file:'){open();return}
+    const entryEpoch=net.entryEpoch;
+    if(net.configLoading)await net.configLoading;
+    if(entryEpoch!==net.entryEpoch)return;
+    const name=el('pilotName').value.trim();
+    if(!name){setError('Önce pilot adını yaz.');el('pilotName').focus();return}
+    if(computeBuild(LO).err.length){setError('Önce hangardaki donanım hatalarını düzelt.');return}
+    if(request.type==='join'&&!/^[A-F0-9]{6}$/.test(request.code)){setError('6 karakterlik oda kodunu yaz.');return}
+    if(net.connecting)return;
+    let address;try{address=endpoint(el('serverAddress').value.trim());}catch(e){setError(e.message);return;}
+    const accessKey=el('serverKey').value.trim();net.failure=null;
+    try{localStorage.setItem('sui_pilot',name)}catch{}
+    const payload={...request,name,lo:JSON.parse(JSON.stringify(LO))};
+    if(net.ws?.readyState===WebSocket.OPEN&&net.connectedUrl===address){send(payload);return}
+    if(net.ws){const old=net.ws;net.ws=null;old.close();}
+    net.connecting=true;net.pending=payload;setError('Sunucuya bağlanılıyor…');
+    let ws;try{ws=new WebSocket(address);}catch(e){net.connecting=false;setError('Sunucu adresi açılamadı.');return;}net.ws=ws;net.connectedUrl=address;
+    const timeout=setTimeout(()=>{if(net.connecting&&net.ws===ws){ws.close();setError('Sunucuya ulaşılamadı. Bağlantıyı kontrol edip tekrar dene.')}},8000);
+    ws.onmessage=event=>{
+      if(net.ws!==ws)return;
+      let msg;try{if(typeof event.data!=='string'||event.data.length>2000000)throw Error();msg=JSON.parse(event.data);if(!msg||typeof msg!=='object')throw Error();}catch{net.failure='Sunucudan geçersiz yanıt alındı.';ws.close();return;}
+      if(msg.type==='authRequired'){
+        if(msg.protocol!==NET_PROTOCOL||msg.build!==NET_BUILD){net.failure='Oyun ve sunucu sürümleri farklı. GitHub index.html dosyasını güncelle ve sunucuyu yeniden derle.';ws.close();return;}
+        send({type:'auth',key:accessKey,protocol:NET_PROTOCOL,build:NET_BUILD});
+      }
+      if(msg.type==='hello'){clearTimeout(timeout);net.id=msg.id;net.connecting=false;setError('');const pending=net.pending;net.pending=null;if(pending)send(pending)}
+      if(msg.type==='error'){net.failure=String(msg.message||'Sunucu hatası');setError(net.failure);net.connecting=false}
+      if(msg.type==='notice'&&net.playing){
+        const safe=text=>String(text||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+        if(msg.kind==='message')message(safe(msg.text),safe(msg.sub));else toast(msg.text);
+      }
+      if(msg.type==='room'){net.room=msg;net.countdownEnd=msg.deadline?performance.now()+Math.max(0,msg.deadline-msg.serverTime):null;setError('');if(!net.playing){show('online');renderRoom()}}
+      if(msg.type==='start'){try{start(msg)}catch(e){net.failure='Maç başlatılamadı; oyun ve sunucu paketini birlikte güncelle.';ws.close();}}
+      if(msg.type==='snapshot'&&net.playing){try{applySnapshot(msg.snapshot)}catch(e){net.failure='Maç verisi geçersiz veya sürüm uyumsuz.';ws.close();}}
+      if(msg.type==='ended'){
+        stop();const score=msg.score||{A:0,B:0};
+        let winner=msg.winner;
+        if(winner==='time')winner=score.A===score.B?'draw':score.A>score.B?'A':'B';
+        el('onlineNotice').textContent=winner==='error'?'Maç bağlantısında bir sorun oluştu. Yeniden hazır olabilirsiniz.':(winner==='draw'?'BERABERE':winner==='A'?'MAVİ TAKIM KAZANDI':'KIZIL TAKIM KAZANDI')+' · '+Math.round(score.A)+' – '+Math.round(score.B)+' · Yeni maç için tekrar hazır ol.';
+        show('online');
+      }
+      if(msg.type==='pong'){net.lastPing=performance.now()-msg.time;el('netIndicator').textContent=Math.round(net.lastPing)+' ms'}
+    };
+    ws.onerror=()=>{if(net.ws===ws)setError('Sunucu bağlantısı kurulamadı. Sunucu adresini, anahtarı ve sunucunun açık olduğunu kontrol et.')};
+    ws.onclose=()=>{
+      clearTimeout(timeout);if(net.ws!==ws)return;
+      const hadRoom=!!net.room;net.ws=null;net.connecting=false;net.pending=null;net.room=null;
+      if(net.playing)stop();
+      if(hadRoom){show('online');el('onlineEntry').hidden=false;el('onlineLobby').hidden=true;el('onlineNotice').textContent='Bağlantı kesildi. Maç sürüyorsa uçağını bot devralır. Yeni maç için yeniden katılabilirsin.'}
+      setError(net.failure||'Bağlantı kapandı. Sunucu açık mı? Adres değiştiyse Sunucu adresini yenile düğmesine bas.');
+    };
+  }
+  function renderRoom(){
+    const room=net.room;if(!room)return;
+    el('onlineEntry').hidden=true;el('onlineLobby').hidden=false;el('roomCode').textContent=room.code;el('roomCount').textContent=room.players.length+' / '+room.maxPlayers+' oyuncu · '+(room.publicRoom?'Herkese açık':'Yalnızca oda koduyla');
+    const me=room.players.find(p=>p.id===net.id);
+    for(const team of ['A','B']){
+      const members=room.players.filter(p=>p.team===team),list=el('players'+team);list.replaceChildren();
+      for(const p of members){const row=document.createElement('li');row.className='pilot-row';const name=document.createElement('span');name.className='pilot-name';name.textContent=p.name+(p.id===net.id?' (sen)':'');const badge=document.createElement('span');badge.className='ready-badge'+(p.ready?' yes':'');badge.textContent=p.ready?'✓ HAZIR':'Bekliyor';row.append(name,badge);list.append(row)}
+      const selected=me?.team===team;el('team'+team).classList.toggle('selected',selected);const btn=el('team'+team).querySelector('button');btn.setAttribute('aria-pressed',String(selected));const full=members.length>=room.teamSize;btn.disabled=full&&!selected;btn.textContent=(team==='A'?'MAVİ':'KIZIL')+(selected?' · SENİN TAKIMIN':full?' · TAKIM DOLU':' TAKIMA KATIL');el('bots'+team).textContent=members.length+' / '+room.teamSize+' oyuncu · '+(room.teamSize-members.length)+' bot';
+    }
+    const unassigned=room.players.filter(p=>!p.team).map(p=>p.name);el('unassigned').textContent=unassigned.length?'Takım seçiyor: '+unassigned.join(', '):'';
+    el('readyBtn').disabled=!me?.team;el('readyBtn').textContent=me?.ready?'HAZIR DEĞİLİM':'HAZIRIM';el('readyBtn').setAttribute('aria-pressed',String(!!me?.ready));updateCountdown();
+  }
+  function updateCountdown(){
+    const room=net.room;if(!room||net.playing)return;
+    const ready=room.players.filter(p=>p.ready).length;
+    el('readyStatus').textContent=room.status==='countdown'?'KALKIŞA '+Math.max(1,Math.ceil((net.countdownEnd-performance.now())/1000))+'…':!['A','B'].every(team=>room.players.some(p=>p.team===team))?'Başlamak için her takımda en az 1 gerçek oyuncu olmalı (1v1).':ready+' / '+room.players.length+' hazır. Herkes hazır olduğunda maç başlayacak.';
+  }
+  function start(msg){
+    if(!Array.isArray(msg.roster)||msg.roster.length>16)throw Error('Geçersiz kadro');
+    for(const p of msg.roster)p.lo=checkedLoadout(p.lo);
+    if(G.raf)cancelAnimationFrame(G.raf);
+    clearInput();net.objects.clear();net.meta=new Map(msg.roster.map(p=>[p.eid,p]));net.playing=true;net.frameId++;
+    G.run=true;G.over=false;G.paused=false;G.msg='';G.msgT=0;G.toastT=0;G.shake=0;G.camSnap=true;G._mvSig=null;
+    G.mode='fleet';G.mission={kills:{A:0,B:0},captures:{A:0,B:0},result:null};
+    G.cam={x:0,y:0};G.zoom=0.82;
+    el('game').classList.add('online-match');el('pauseTitle').textContent='OYUN MENÜSÜ';el('pauseView').querySelector('.p-sub').textContent='ONLINE MAÇ DEVAM EDİYOR';el('pExit').textContent='MAÇTAN AYRIL / HANGAR';
+    el('onlineNotice').textContent='';show('game');resizeCv();applySnapshot(msg.snapshot);el('cv').focus();
+    message('ORTAK KALKIŞ','Takımınla birlikte rakip carrier’ı devre dışı bırak.');G.last=performance.now();
+    // A generation token prevents a late frame from an old match drawing twice.
+    const generation=net.frameId;
+    function frame(now){if(!net.playing||generation!==net.frameId)return;renderFrame(now);requestAnimationFrame(frame)}
+    requestAnimationFrame(frame);
+  }
+  function applySnapshot(s){
+    const now=performance.now(),prior=G.me?{hp:G.me.hp,ammo:G.me.ammo,used:G.me.pods.filter(p=>p.used).length}:null;
+    if(!s||!s.groups||!Number.isFinite(s.t))throw Error('Geçersiz durum');
+    const groups=['planes','ships','bullets','missiles','bombs','cms','flak','parts'];
+    if(Object.keys(s.groups).some(k=>!groups.includes(k))||groups.some(k=>!Array.isArray(s.groups[k])||s.groups[k].length>4000))throw Error('Geçersiz nesneler');
+    const ids=new Set();
+    for(const [group,rows] of Object.entries(s.groups))for(const row of rows){
+      ids.add(row.eid);
+      if(!net.objects.has(row.eid)){
+        const meta=net.meta.get(row.eid);
+        net.objects.set(row.eid,group==='planes'?makePlane(row.v.team,meta.lo,false):{});
+      }
+    }
+    function decode(v){if(!v||typeof v!=='object')return v;if('$ref'in v)return net.objects.get(v.$ref)||null;if('$map'in v)return new Map(v.$map.map(([a,b])=>[decode(a),decode(b)]));if(Array.isArray(v))return v.map(decode);const o=Object.create(null);for(const [k,x]of Object.entries(v)){if(['__proto__','constructor','prototype','st','lo'].includes(k))continue;o[k]=decode(x);}return o}
+    for(const [group,rows]of Object.entries(s.groups)){
+      G[group]=rows.map(row=>{
+        const o=net.objects.get(row.eid),old=o._netTo||{x:o.x,y:o.y,ang:o.ang,rollA:o.rollA};
+        const state=decode(row.v);Object.assign(o,state);
+        const snap=!Number.isFinite(old.x)||Math.hypot(old.x-o.x,old.y-o.y)>500;
+        o._netFrom=snap?{x:o.x,y:o.y,ang:o.ang,rollA:o.rollA}:old;o._netTo={x:o.x,y:o.y,ang:o.ang,rollA:o.rollA};
+        if(group==='planes'){refreshWing(o);if(o._netTankState!==o.tankOn){o.st=computeBuild({...o.lo,mods:o.tankOn?o.lo.mods:o.lo.mods.filter(k=>k!=='tank')},{katli:o.katli});o._netTankState=o.tankOn;}}
+        return o;
+      });
+    }
+    for(const id of net.objects.keys())if(!ids.has(id))net.objects.delete(id);
+    const oldMe=G.me;G.me=G.planes.find(p=>p.netId===net.id)||null;
+    if(G.me&&oldMe&&Math.hypot(G.me.x-G.cam.x,G.me.y-G.cam.y)>2500)G.camSnap=true;
+    G.t=s.t;G.sure=s.sure;G.score=s.score;net.lastSnapshot=now;net.latest=s;
+    if(prior&&G.me){if(G.me.ammo<prior.ammo)SFX.gunshot(G.me.st.gun?.hasar>60);if(G.me.hp<prior.hp){SFX.hit(0.7);G.shake=.3}if(G.me.pods.filter(p=>p.used).length>prior.used)SFX.missileLaunch()}
+  }
+  function renderFrame(now){
+    const dt=Math.min((now-G.last)/1000,.05);G.last=now;
+    const alpha=Math.min(1,(now-net.lastSnapshot)/50);
+    for(const o of net.objects.values()){
+      const a=o._netFrom,b=o._netTo;if(!a||!b)continue;
+      if(Number.isFinite(b.x))o.x=a.x+(b.x-a.x)*alpha;if(Number.isFinite(b.y))o.y=a.y+(b.y-a.y)*alpha;
+      if(Number.isFinite(b.ang))o.ang=Number.isFinite(a.ang)?a.ang+angDiff(a.ang,b.ang)*alpha:b.ang;
+      if(Number.isFinite(b.rollA))o.rollA=Number.isFinite(a.rollA)?a.rollA+angDiff(a.rollA,b.rollA)*alpha:b.rollA;
+    }
+    G.msgT=Math.max(0,G.msgT-dt);G.toastT=Math.max(0,G.toastT-dt);G.shake=Math.max(0,G.shake-dt*3);
+    draw();updateHUD();const p=G.me;SFX.engineUpdate(p?p.thr:0,p?p.ab:false,!!(p&&!p.dead&&p.dockT==null)&&!G.paused);
+    if(now-net.lastSnapshot>2000)el('netIndicator').textContent='Bağlantı bekleniyor…';
+  }
+  function input(){
+    if(!net.playing)return;
+    const paused=G.paused||document.hidden||!G.me;
+    if(paused){send({type:'input',controls:{angle:null,dist:0,throttle:0,ab:false,gun:false}});return}
+    updateMouseWorld();const p=G.me;
+    const angle=TOUCH.active?(TOUCH.dist>10?TOUCH.ang:null):Math.atan2(MOUSE.wy-p.y,MOUSE.wx-p.x);
+    send({type:'input',controls:{angle,touch:TOUCH.active,dist:TOUCH.dist,throttle:(KEY.KeyZ?1:0)-(KEY.KeyX?1:0),ab:TOUCH.active?TOUCH.abOn:!!(KEY.ShiftLeft||KEY.ShiftRight),gun:MOUSE.l}});
+    if(MOUSE.r){action('fire');MOUSE.r=false}
+  }
+  function key(code){
+    const mapping={Tab:'cycle',KeyH:'dock',KeyF:'flare',KeyC:'chaff',KeyY:'radar',KeyG:'wing',KeyB:'tank',Space:'fire'};
+    if(mapping[code])action(mapping[code]);
+    else if(/^Digit[1-6]$/.test(code))action('select',+code.slice(5)-1);
+    else if(MV_KEYS.includes(code))action('maneuver',MV_KEYS.indexOf(code));
+  }
+  el('serverAddress').oninput=()=>{
+    net.configRevision++;net.configMode=el('serverAddress').value.trim()?'manual':'auto';
+    net.configController?.abort();net.configController=null;net.configLoading=null;el('refreshServer').disabled=false;
+    configStatus(net.configMode==='manual'?'Elle yazılan adres kullanılacak.':'Otomatik adres için Sunucu adresini yenile düğmesine bas.');
+  };
+  el('refreshServer').onclick=()=>loadConfig(true);
+  el('toOnline').onclick=open;el('hangarOnline').onclick=open;el('onlineBack').onclick=leave;
+  el('createRoom').onclick=()=>connect({type:'create',publicRoom:el('publicRoom').checked});
+  el('findRoom').onclick=()=>connect({type:'find'});
+  el('joinRoomForm').onsubmit=e=>{e.preventDefault();return connect({type:'join',code:el('onlineCodeInput').value.trim().toUpperCase()})};
+  document.querySelectorAll('[data-team]').forEach(btn=>btn.onclick=()=>send({type:'team',team:btn.dataset.team}));
+  el('readyBtn').onclick=()=>{const me=net.room?.players.find(p=>p.id===net.id);if(me)send({type:'ready',ready:!me.ready})};
+  el('copyInvite').onclick=async()=>{
+    if(!net.room)return;
+    const local=['localhost','127.0.0.1','[::1]'].includes(location.hostname);
+    const u=new URL(local?'https://nukelaguesoftware.github.io/squadroneight/':location.href);u.search='';
+    u.hash=new URLSearchParams({server:net.connectedUrl,room:net.room.code}).toString();
+    try{await navigator.clipboard.writeText(u.href);el('onlineNotice').textContent='Davet bağlantısı kopyalandı. Giriş anahtarını arkadaşına ayrıca ilet.';}catch{el('onlineNotice').textContent='Davet bağlantısı: '+u.href;}
+  };
+  try{const q=new URLSearchParams(location.hash.slice(1));const server=q.get('server');if(server){el('serverAddress').value=endpoint(server);net.configMode='invite';configStatus('Davet bağlantısındaki sunucu kullanılacak.');}const room=q.get('room');if(room&&/^[A-F0-9]{6}$/i.test(room))el('onlineCodeInput').value=room.toUpperCase();}catch{setError('Davet sunucu adresi geçersiz; adresi elle gir.');}
+  el('copyRoom').onclick=async()=>{try{await navigator.clipboard.writeText(net.room.code);el('copyRoom').textContent='KOPYALANDI';setTimeout(()=>el('copyRoom').textContent='KODU KOPYALA',1500)}catch{setError('Kodu seçip kopyala: '+net.room.code)}};
+  try{el('pilotName').value=localStorage.getItem('sui_pilot')||''}catch{}
+  setInterval(updateCountdown,200);setInterval(input,1000/30);setInterval(()=>{if(net.ws?.readyState===WebSocket.OPEN)send({type:'ping',time:performance.now()})},2000);
+  addEventListener('blur',()=>{if(net.playing){clearInput();input()}});
+  document.addEventListener('visibilitychange',()=>{if(net.playing&&document.hidden){clearInput();input()}});
+  return {get playing(){return net.playing},open,leave,action,key};
+})();
+
+
+/* ONLINE CLIENT END */
 </script>
 </body>
 </html>
